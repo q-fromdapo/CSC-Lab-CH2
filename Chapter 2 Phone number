@@ -1,0 +1,31 @@
+
+user_input = input()
+user_phone = int(user_input.replace(' ', ''))  
+
+area_code = user_phone // 10000000
+t_prefix = user_phone // 10000
+prefix = t_prefix % 1000
+line_number = user_phone % 10000
+us_code = '+1'
+phone_num = f'U.S.     {us_code} ({area_code}){prefix}-{line_number}'
+
+bra_code = '+55'
+bra_num = f'Brazil   {bra_code} ({area_code}){prefix + 100}-{line_number}'
+
+cro_code = '+385'
+cro_num = f'Croatia  {cro_code} ({area_code}){prefix}-{line_number + 50}'
+
+egy_code = '+20'
+egy_num = f'Egypt    {egy_code} ({area_code + 30}){prefix}-{line_number}'
+
+fra_code = '+33'
+fra_num = f'France   {fra_code} ({prefix}){area_code}-{line_number}'
+
+
+print('Country  Phone Number')
+print('-------  ------------')
+print(phone_num)
+print(bra_num)
+print(cro_num)
+print(egy_num)
+print(fra_num)  
